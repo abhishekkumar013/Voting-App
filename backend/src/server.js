@@ -34,10 +34,12 @@ app.use(cookieParser())
 import authRoutes from './Routes/auth.routes.js'
 import candidatesRoutes from './Routes/candidates.routes.js'
 import voterRoutes from './Routes/voter.routes.js'
+import adminRoutes from './Routes/admin.routes.js'
 
 app.use('/api/v1/auth', authRoutes)
 app.use('/api/v1/candidate', candidatesRoutes)
 app.use('/api/v1/votes', voterRoutes)
+app.use('/api/v1/admin', adminRoutes)
 
 const PORT = process.env.PORT || 8080
 app.listen(PORT, () => {
